@@ -1,4 +1,4 @@
-package ru.gb.jseminar;
+package ru.gb.oopseminar;
 
 public class ANSIConstants {
     public static final String ANSI_RESET = "\u001B[0m";
