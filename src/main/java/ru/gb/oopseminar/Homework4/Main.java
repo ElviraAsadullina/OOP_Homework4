@@ -62,7 +62,7 @@ public class Main extends JFrame {
             userService.remove(idx);
             table.updateUI();
             JFrame frame = new JFrame();
-            JOptionPane.showMessageDialog(frame.getComponentAt(10,10), "Пользователь удален!!");
+            JOptionPane.showMessageDialog(frame.getComponentAt(10,10), "Пользователь удален!");
         });
         JButton saveAll = new JButton("Сохранить");
         saveAll.addActionListener(e -> {
