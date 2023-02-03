@@ -53,11 +53,11 @@ public class Student extends User {
 
     @Override
     public String toString() {
-        return "_Student_" +
-                "name_" + this.getName() +
-                "_grade_" + this.grade +
-                "_year_" + this.year +
-                "_teacher_" + teacher.getName() +
+        return "_Ученик_" +
+                "Имя_" + this.getName() +
+                "_Средний балл_" + this.grade +
+                "_Класс_" + this.year +
+                "_Учитель_" + teacher.getName() +
                 "\n";
     }
 }

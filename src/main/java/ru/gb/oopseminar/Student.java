@@ -1,5 +1,6 @@
 package ru.gb.oopseminar;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 public class Student implements Comparable<Student> {
@@ -57,10 +58,9 @@ public class Student implements Comparable<Student> {
 
     @Override
     public String toString() {
-        return "Ученик{" +
-                "name='" + name + '\'' +
-                ", grade=" + grade +
-                ", year=" + year +
-                '}';
+        return "Ученик: " +
+                "Имя=" + name +
+                ", Средний балл=" + grade +
+                ", класс=" + year;
     }
 }

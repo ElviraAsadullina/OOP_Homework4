@@ -10,13 +10,14 @@ public class AddList {
 
     public static void main(String[] args) {
         UserService userService = new UserServiceImpl();
-        userService.add(new Student("Roman", 4.92f, 4, new Teacher("Антонина Петровна")));
-        userService.add(new Student("Andrew", 4.52f, 1, new Teacher("Валентина Петровна")));
-        userService.add(new Student("Nicolas", 3.2f, 1, new Teacher("Анастасия")));
-        userService.add(new Student("Jeffrey", 5.00f, 2, new Teacher("Павел Иванович")));
-        userService.add(new Student("Angela", 3.11f, 3, new Teacher("Петр Павел")));
-        userService.add(new Student("Rose", 2.92f, 3, new Teacher("Антон")));
-        userService.add(new Student("Jenny", 3.94f, 4, new Teacher("Крис")));
-        userService.add(new Teacher("Bella"));
+        Teacher t1 = new Teacher("Савченко Галина Степановна");
+        userService.add(t1);
+        userService.add(new Student("Афонасьев Иван", 4.92f, 11, t1));
+        userService.add(new Student("Быкова Вероника", 4.52f, 11, t1));
+        userService.add(new Student("Воробьев Павел", 2.56f, 10, t1));
+        userService.add(new Student("Гусев Сергей", 5.00f, 7, t1));
+        userService.add(new Student("Давыдова Инна", 4.11f, 9, t1));
+        userService.add(new Student("Ершова Кристина", 3.92f, 4, t1));
+        userService.add(new Student("Жиляев Алексей", 3.21f, 5, t1));
     }
 }

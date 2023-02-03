@@ -1,7 +1,9 @@
 package ru.gb.oopseminar.Homework4.Model;
 
+import javax.swing.*;
 import java.util.List;
 import java.util.Objects;
+
 
 public class Teacher extends User {
     private List<Student> group;
@@ -33,7 +35,7 @@ public class Teacher extends User {
 
     @Override
     public String toString() {
-        return "_Teacher_"
+        return "_Учитель_"
                 + this.getName() +
                 "\n";
     }

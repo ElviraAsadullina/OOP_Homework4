@@ -9,20 +9,12 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * The class combines repository methods
- * for both Student and Teacher classes
- * @param <T>
- */
+
 public class UserRepository<T extends User> {
     private List<T> users = new ArrayList<>();
     String outputFileName = "Users.txt";
 
 
-    /**
-     * updates the users List before any operations with the list
-     * does the checks to make sure it works with an actual list
-     */
     private void load() {
         users.clear();
         try(BufferedReader reader = new BufferedReader(new FileReader(outputFileName))){
@@ -30,11 +22,11 @@ public class UserRepository<T extends User> {
             while ((line = reader.readLine()) != null) {
                 String[] tokens;
                 tokens = line.split("_");
-                if ("Student".equals(tokens[1])) {
+                if ("Ученик".equals(tokens[1])) {
                     Student student = new Student(tokens[3], Float.parseFloat(tokens[5]),
                             Integer.parseInt(tokens[7]), new Teacher(tokens[9]));
                     users.add((T) student);
-                } else if ("Teacher".equals(tokens[1])) {
+                } else if ("Учитель".equals(tokens[1])) {
                     Teacher teacher = new Teacher(tokens[2]);
                     users.add((T) teacher);
                 }
@@ -44,10 +36,6 @@ public class UserRepository<T extends User> {
         }
     }
 
-    /**
-     * Checks if the List already contains the T and adds only the new T
-     * @param user
-     */
     public void save(T user){
         load();
         if (!users.contains(user)) {
@@ -58,7 +46,7 @@ public class UserRepository<T extends User> {
                 System.out.println(exception.getMessage());
             }
         } else {
-            System.out.println("Такой уже есть!");
+            System.out.println("Пользователь уже существует!");
         }
     }
     public void saveAll(List<T> users){

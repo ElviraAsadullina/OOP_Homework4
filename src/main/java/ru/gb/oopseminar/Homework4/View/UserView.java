@@ -34,16 +34,15 @@ public class UserView extends AbstractTableModel {
     public String getColumnName(int columnIndex) {
         switch (columnIndex) {
             case 0:
-                return "Type";
+                return "Категория";
             case 1:
-                return "Name";
+                return "Имя";
             case 2:
-                return "Grade";
+                return "Средний балл";
             case 3:
-                return "Year";
+                return "Класс";
             case 4:
-                return "Teacher";
-            // ...
+                return "Учитель";
         }
         return "";
     }
@@ -67,7 +66,6 @@ public class UserView extends AbstractTableModel {
                 case 4 -> {
                     return ((Student) user).getTeacher().getName();
                 }
-                // ...
             }
         } else if (user instanceof Teacher) {
             switch (columnIndex) {
